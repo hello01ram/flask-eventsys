@@ -1,5 +1,5 @@
 # flask-eventsys
- A simple Flask application for creating calendar events
+ A simple Flask application for creating calendar events.
  The application has a calendar which you can click on and the app gets all events happening at that day. 
  You can create new events with name and date, and, you can also choose whether an event recurring (Someone's birthday). And, you can update and delete events. 
  
@@ -12,14 +12,14 @@
  The tools I used to build the application: 
 
  * Backend: 
-  * Server-side language: Python
-  * Framework: Flask 
-  * Template engine: Flask default (Jinja)
+   * Server-side language: Python
+   * Framework: Flask 
+   * Template engine: Flask default (Jinja)
 
  * Database: 
-  * Sqlite database
+   * Sqlite database
 
  * Frontend: 
-  * HTML
-  * CSS
-  * JavaScript
+   * HTML
+   * CSS
+   * JavaScript
