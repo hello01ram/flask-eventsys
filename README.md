@@ -8,6 +8,8 @@
  The application uses APIs to do most of it's functionalities asynchronously. 
 
  There are many ways to go about doing the application. I used the callback way of doing the HTTP requests (I think a better way would be using promises).
+ 
+ #### to run the application, click on the 'Rnn and Debug' then start debugging
 
  The tools I used to build the application: 
 
