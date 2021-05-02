@@ -1,0 +1,38 @@
+{% extends "parts/base.html" %} {% block HEAD_RESOURCES %}
+<script defer src="static/scripts/index.js"></script>
+{% endblock %} {% block MAIN %}
+<div class="lg-col">
+  <!-- Events start -->
+  <div class="events-placeholder">
+    <div class="section-header">
+      <h2 class="section-title">Today's Events</h2>
+    </div>
+    <!-- Events container -->
+    <div class="events-container">
+      <!-- Javascript generated HTML goes here -->
+    </div>
+  </div>
+  <!-- Events End -->
+</div>
+<!-- Calendar start -->
+<div class="lg-col">
+  <div class="calendar-placeholder">
+    <div class="section-header row month-nav">
+      <button class="previous-month button">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <h2 class="current-active-month">April 2021</h2>
+      <button class="next-month button">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="month-container row center">
+      <!-- JavaScript generated HTML goes here -->
+    </div>
+  </div>
+</div>
+<div class="popup event-popup-form">
+  <div class="popup-container">{% include "parts/eventform.html" %}</div>
+</div>
+<!-- Calendar end -->
+{% endblock %}

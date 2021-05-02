@@ -1,0 +1,31 @@
+query = """
+  SELECT * FROM events 
+    WHERE 
+      (date BETWEEN :from AND :to)
+      OR 
+      (
+        recurring = 1 AND 
+        (
+          (
+            CAST(strftime('%m', datetime(date / 1000, 'unixepoch')) AS INTEGER) > CAST(strftime('%m', datetime(:from / 1000, 'unixepoch')) AS INTEGER)
+            AND 
+            CAST(strftime('%m', datetime(date / 1000, 'unixepoch')) AS INTEGER) < CAST(strftime('%m', datetime(:to / 1000, 'unixepoch')) AS INTEGER)
+          )
+          OR 
+          (
+            CAST(strftime('%m', datetime(:from / 1000, 'unixepoch')) AS INTEGER) = CAST(strftime('%m', datetime(:to / 1000, 'unixepoch')) AS INTEGER)
+            AND 
+            CAST(strftime('%m', datetime(date / 1000, 'unixepoch')) AS INTEGER) = CAST(strftime('%m', datetime(:to / 1000, 'unixepoch')) AS INTEGER)
+            AND
+            CAST(strftime('%d', datetime(date / 1000, 'unixepoch')) AS INTEGER) >= CAST(strftime('%d', datetime(:from / 1000, 'unixepoch')) AS INTEGER)
+            AND
+            CAST(strftime('%d', datetime(date / 1000, 'unixepoch')) AS INTEGER) < CAST(strftime('%d', datetime(:to / 1000, 'unixepoch')) AS INTEGER)
+          )
+        )
+      )
+    ORDER BY 
+      strftime('%m', datetime(date / 1000, 'unixepoch')) ASC, 
+      strftime('%d', datetime(date / 1000, 'unixepoch')) ASC, 
+      strftime('%H', datetime(date / 1000, 'unixepoch')) ASC, 
+      strftime('%M', datetime(date / 1000, 'unixepoch')) ASC
+  """

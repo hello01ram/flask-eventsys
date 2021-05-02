@@ -1,0 +1,30 @@
+{% extends "parts/base.html" %} {% block HEAD_RESOURCES %}
+<script defer src="static/scripts/events.js"></script>
+{% endblock %} {% block MAIN %}
+<div class="full-width">
+  <!-- All events -->
+  <div class="events-placeholder">
+    <div class="section-header row center-ver spacing">
+      <h2 class="section-title">2021 year events</h2>
+      <div class="year-event-controls">
+        <label for="events-year">Events for</label>
+        <input
+          type="number"
+          name="year"
+          id="events-year"
+          min="1800"
+          max="2100"
+          value="2021"
+        />
+      </div>
+    </div>
+    <!-- Events container -->
+    <div class="events-container">
+      <!-- Javascript generated HTML goes here -->
+    </div>
+  </div>
+</div>
+<div class="popup event-popup-form">
+  <div class="popup-container">{% include "parts/eventform.html" %}</div>
+</div>
+{% endblock %}
