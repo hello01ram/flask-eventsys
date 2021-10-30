@@ -1,0 +1,62 @@
+<div id="event-action">
+  <h2 class="event-form-title">Add Event</h2>
+  <div class="event-form-errors"></div>
+  
+  <form id="event-form" class="show">
+    <div >
+      <h3>Event Details</h3>
+      <div class="form-field">
+        <label for="event-name">Name: </label>
+        <input type="text" name="name" placeholder="name" id="event-name">
+      </div>
+      <div class="form-field">
+        <label for="recurring-event">Recurring: </label>
+        <input type="checkbox" name="recurring" id="recurring-event">
+      </div>
+    </div>
+    <div>
+      <h3>Event Date</h3>
+      <div class="form-field">
+        <label for="event-year">Year</label>
+        <input type="number" name="year" placeholder="Year" id="event-year">
+      </div>
+      <div class="form-field">
+        <label for="event-month">Month</label>
+        <input type="number" name="month" placeholder="Month" id="event-month">
+      </div>
+      <div class="form-field">
+        <label for="event-day">Day</label>
+        <input type="number" name="day" placeholder="Day" id="event-day">
+      </div>
+    </div>
+    <div>
+      <h3>Event Time</h3>
+      <div class="form-field">
+        <label for="event-hour">Hour</label>
+        <input type="number" name="hour" placeholder="Hour" id="event-hour">
+      </div>
+      <div class="form-field">
+        <label for="event-minute">Minute</label>
+        <input type="number" name="minute" placeholder="Minute" id="event-minute">
+      </div>
+     <div class="form-field center-ver">
+       <label>AM/PM</label>
+      <div>
+        <label for="time-am">AM</label>
+        <input type="radio" name="ampm" value="am" id="time-am" checked>
+        <label for="time-pm">PM</label>
+        <input type="radio" name="ampm" value="pm" id="time-pm">
+      </div>
+     </div>
+    </div>
+    <div class="form-field">
+      <label for="event-notes">Notes</label>
+      <textarea name="notes" cols="30" rows="5" id="event-notes"></textarea>
+    </div>
+
+    <div class="row form-field">
+      <button type="submit" id="submit-event-button" class="submit-btn">Submit</button>
+      <button type="button" id="cancel-event-button" class="cancel-btn">Cancel</button>
+    </div>
+  </form>
+</div>

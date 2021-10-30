@@ -77,6 +77,7 @@ function renderErrors(errors = {}, errorBox, formElements = {}) {
   html += "<h3>Errors in your form</h3>";
   for (let err in errors) {
     html += `<p class="error"><span>${err}</span>: ${errors[err]}</p>`;
+    console.log('Here', formElements[err]);
     formElements[err]?.classList.add("error");
   }
   html += "</div>";

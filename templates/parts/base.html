@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask EventSys</title>
+  <link rel="stylesheet" href="/static/stylesheets/style.css">
+  <script defer src="/static/scripts/libraries/http.js"></script>
+  <script defer src="/static/scripts/libraries/datetime.js"></script>
+  <script defer src="/static/scripts/script.js"></script>
+  <script defer src="/static/scripts/mvc/model.js"></script>
+  <script defer src="/static/scripts/mvc/controller.js"></script>
+  <script defer src="/static/scripts/mvc/view.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {% block HEAD_RESOURCES %}
+  {% endblock %}
+</head>
+<body>
+  <div class="wrapper">
+    <header id="main-header" class="center spacing">
+      <h1 class="date-placeholder medium title">Monday: 01 March 2021</h1>
+      <button class="button add-button"><i class="far fa-calendar-plus"></i></button>
+    </header>
+    <nav id="main-navigation">
+      <ul class="navigation">
+        <li>
+          <a href="/" class="snake-animation"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="/events" class="snake-animation"><i class="fas fa-calendar-alt"></i> Events</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="content-container row">
+      {% block MAIN %}
+      {% endblock %}
+    </main>
+  </div>
+</body>
+</html>
